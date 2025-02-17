@@ -1,4 +1,4 @@
-import WeatherCard from "../WeatherCard/weathercard";
+import WeatherCard from "../WeatherCard/weatherCard";
 import ItemCard from "../ItemCard/ItemCard";
 import { defaultClothingItems } from "../../utils/constants";
 import "./main.css";

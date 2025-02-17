@@ -1,6 +1,6 @@
 import sunny from "../../assets/sunny.png";
 
-import "../WeatherCard/weathercard.css";
+import "../WeatherCard/weatherCard.css";
 
 function WeatherCard() {
   return (

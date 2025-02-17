@@ -13,6 +13,6 @@ export const getWeather = ({ latitude, longitude }, APIkey) => {
 export const filterWeatherData = (data) => {
   const result = {};
   result.city = data.name;
-
+  result.temp = { F: data.main.temp };
   return result;
 };
