@@ -17,6 +17,7 @@
 
 .modal_title {
   margin: 0;
+  font: 16px;
 }
 
 .modal__close {
@@ -29,10 +30,12 @@
   background-color: #fff;
   position: relative;
   padding: 28px 28px 36px;
-
+  font-size: 16px;
+  line-height: 20px;
   max-width: 496px;
   box-sizing: border-box;
   width: 100%;
+  gap: 24px;
 }
 
 .modal__form {

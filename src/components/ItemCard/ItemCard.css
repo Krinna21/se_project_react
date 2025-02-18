@@ -9,8 +9,19 @@
   position: absolute;
   top: 15px;
   margin: 0;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 3px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .card__image {
   width: 100%;
+  top: 280px;
+  left: 1076px;
+  border-width: 1px;
+  border: 1px solid #0000004d;
+  border-radius: 19px;
 }

@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../../fonts/CabinetGrotesk-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .page {
   background: #f3f3f3;
+  font-family: "Cabinet Grotesk", sans-serif;
 }
 
 .page__content {
