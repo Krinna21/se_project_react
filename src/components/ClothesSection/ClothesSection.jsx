@@ -8,7 +8,7 @@ function ClothesSection({ clothingItems, handleCardClick }) {
         <p>Your Items</p>
         <button>Add New</button>
       </div>
-      <ul className="cards__list">
+      <ul className="clothes-section__list">
         {clothingItems.map((item) => (
           <ItemCard key={item._id} item={item} onCardClick={handleCardClick} />
         ))}
