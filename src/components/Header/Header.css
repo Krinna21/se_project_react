@@ -18,6 +18,7 @@
   height: 24;
   top: 11px;
   left: 113px;
+  font-weight: 300;
 }
 
 .header__left {
@@ -66,6 +67,12 @@
   height: 25;
   top: 8px;
   left: 1151px;
+}
+
+.header__profile-link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 300;
 }
 
 @media (max-width: 1440px) {
