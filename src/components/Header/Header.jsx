@@ -11,21 +11,31 @@ function Header({ handleAddClick, weatherData }) {
 
   return (
     <header className="header">
-      <img className="header__logo" src={logo} alt="logo" />
-      <p className="header__date-and-location">
-        {currentDate}, {weatherData.city}
-      </p>
-      <ToggleSwitch />
-      <button
-        onClick={handleAddClick}
-        type="button"
-        className="header__add-clothes-btn"
-      >
-        + Add clothes
-      </button>
-      <div className="header__user-container">
-        <p className="header__username">Terrance Tegegne</p>
-        <img src={avatar} alt="Terrance Tegegne" className="header__avatar" />
+      {/* Left section (Logo + Date) */}
+      <div className="header__left">
+        <img className="header__logo" src={logo} alt="logo" />
+        <p className="header__date-and-location">
+          {currentDate}, {weatherData.city}
+        </p>
+      </div>
+
+      {/* Middle spacer to enforce 665px gap */}
+      <div className="header__spacer"></div>
+
+      {/* Right section (ToggleSwitch + Button + User Info) */}
+      <div className="header__right">
+        <ToggleSwitch />
+        <button
+          onClick={handleAddClick}
+          type="button"
+          className="header__add-clothes-btn"
+        >
+          + Add clothes
+        </button>
+        <div className="header__user-container">
+          <p className="header__username">Terrance Tegegne</p>
+          <img src={avatar} alt="Terrance Tegegne" className="header__avatar" />
+        </div>
       </div>
     </header>
   );

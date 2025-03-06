@@ -20,8 +20,24 @@
   left: 113px;
 }
 
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__spacer {
+  flex-grow: 1;
+  min-width: 665px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+}
+
 .header__add-clothes-btn {
-  margin: 0 20px 0 auto;
   width: 116;
   height: 24;
   top: 8px;
@@ -50,4 +66,33 @@
   height: 25;
   top: 8px;
   left: 1151px;
+}
+
+@media (max-width: 1440px) {
+  .header {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .header__spacer {
+    min-width: 0;
+  }
+  .header__right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 665px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .header__left,
+  .header__right {
+    justify-content: center;
+    width: 100%;
+  }
+  .header__spacer {
+    display: none;
+  }
 }
