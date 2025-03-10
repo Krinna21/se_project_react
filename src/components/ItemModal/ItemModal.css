@@ -1,21 +1,20 @@
+.modal__Content {
+  padding: 0;
+}
+
 .modal__content_type_image {
   margin: 0;
   padding: 0;
-  width: 498;
-  height: 610;
-  top: 106px;
-  left: 471px;
-  border-radius: 16px;
-  background-color: #ffffff;
+  font-size: 18px;
+  width: 498px;
+  height: 610px;
+  bottom: 60px;
+  font-weight: 100;
 }
 
 .modal__image {
   width: 100%;
   border-radius: 20px 20px 0 0;
-}
-
-.modal__close {
-  margin: 180px 130px 0 0;
 }
 
 .modal__footer {

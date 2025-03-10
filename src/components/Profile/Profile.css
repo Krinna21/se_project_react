@@ -1,4 +1,18 @@
 .profile {
+  margin: 47px 0 0 0;
   display: flex;
   font-weight: 300;
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.profile__clothing-items {
+  width: 1055px;
+}
+
+.profile__sidebar {
+  width: 385px;
 }

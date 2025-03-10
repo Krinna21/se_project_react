@@ -1,0 +1,18 @@
+.sidebar {
+  gap: 16px;
+  display: flex;
+}
+
+.sidebar__avatar {
+  width: 56px;
+  height: 56px;
+  top: 119px;
+  left: 40px;
+  border-width: 1px;
+}
+
+.clothes-section__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
