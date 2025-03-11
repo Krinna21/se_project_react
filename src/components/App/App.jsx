@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ItemModal from "../ItemModal/ItemModal";
 import Footer from "../Footer/Footer";
-import Profile from "../Profile/profile";
+import Profile from "../Profile/Profile";
 import { getItems, postItem, deleteItem } from "../../utils/api";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { coordinates, APIkey } from "../../utils/constants";
@@ -114,6 +114,7 @@ function App() {
                 <Profile
                   clothingItems={clothingItems}
                   onCardClick={handleCardClick}
+                  handleAddClick={handleAddClick}
                 />
               }
             />
