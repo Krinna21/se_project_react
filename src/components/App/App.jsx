@@ -82,7 +82,7 @@ function App() {
         console.log("Fetched Items:", data);
         const formattedData = data.map((item) => ({
           ...item,
-          link: item.imageUrl,
+          link: item.imageUrl || item.link,
         }));
         setClothingItems(formattedData);
       })
