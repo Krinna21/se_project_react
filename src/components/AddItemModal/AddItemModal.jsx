@@ -11,7 +11,6 @@ export default function AddItemModal({
   const [imageUrl, setImageUrl] = useState("");
   const [weather, setWeather] = useState("");
 
-  // Reset form values when modal opens
   useEffect(() => {
     setName("");
     setImageUrl("");
