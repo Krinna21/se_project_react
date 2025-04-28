@@ -31,4 +31,17 @@ function deleteItem(itemId) {
   });
 }
 
-export { getItems, postItem, deleteItem };
+function updateUserInfo({ name, avatar }) {
+  const token = localStorage.getItem("jwt");
+
+  return request(`${baseURL}/users/me`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ name, avatar }),
+  });
+}
+
+export { getItems, postItem, deleteItem, updateUserInfo };

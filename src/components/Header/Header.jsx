@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import "./Header.css";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import logo from "../../assets/logo.svg";
 import defaultAvatar from "../../assets/avatar.png";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function Header({
   handleAddClick,
@@ -48,11 +50,17 @@ function Header({
                 <p className="header__username">
                   {currentUser?.name || "User"}
                 </p>
-                <img
-                  src={currentUser?.avatar || defaultAvatar}
-                  alt={currentUser?.name || "User"}
-                  className="header__avatar"
-                />
+                {currentUser?.avatar ? (
+                  <img
+                    src={currentUser.avatar}
+                    alt={currentUser.name}
+                    className="header__avatar"
+                  />
+                ) : (
+                  <div className="header__avatar-placeholder">
+                    {currentUser?.name?.charAt(0) || "U"}
+                  </div>
+                )}
               </div>
             </Link>
             <button
