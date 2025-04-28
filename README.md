@@ -1,8 +1,36 @@
-# React + Vite
+# WTWR (What to Wear) - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend project for **WTWR (What to Wear)**, built with **React** and **Vite**.
 
-Currently, two official plugins are available:
+It allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Sign up and sign in
+- Manage their profile
+- Add, view, and delete clothing items
+- Like or dislike items based on the weather
+
+The frontend connects to a custom backend API (built with Express and MongoDB).
+
+## Backend Repository
+
+You can find the backend code here:  
+👉 [se_project_express](https://github.com/Krinna21/se_project_express.git)
+
+## Technologies Used
+
+- React
+- Vite
+- JavaScript (ES6+)
+- HTML5 / CSS3
+- REST API
+
+## Project Setup
+
+To run this project locally:
+
+1. Clone the repository.
+2. Install dependencies:
+
+```bash
+npm install
+```

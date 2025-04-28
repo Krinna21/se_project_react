@@ -47,6 +47,11 @@
   border: none;
 }
 
+.header__auth-btn {
+  border: none;
+  background: none;
+}
+
 .header__avatar {
   cursor: pointer;
 }
