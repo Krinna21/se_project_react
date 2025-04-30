@@ -11,7 +11,7 @@ function ItemCard({ item, onCardClick, onCardLike }) {
   const handleLike = () => {
     onCardLike({
       id: item._id,
-      isLiked: item.likes.includes(currentUser._id),
+      isLiked: item.likes?.includes(currentUser?._id),
     });
   };
 
@@ -25,7 +25,7 @@ function ItemCard({ item, onCardClick, onCardLike }) {
         alt={item.name}
       />
       <button onClick={handleLike} className="card__like-btn">
-        {item.likes.includes(currentUser._id) ? "Unlike" : "Like"}
+        {item.likes?.includes(currentUser?._id) ? "Unlike" : "Like"}
       </button>
     </li>
   );
