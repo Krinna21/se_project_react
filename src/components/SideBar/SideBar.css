@@ -1,7 +1,11 @@
 .sidebar {
   gap: 16px;
+}
+
+.sidebar__header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .sidebar__avatar {
@@ -16,4 +20,26 @@
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+}
+
+.sidebar__buttons {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding-top: 24px;
+  gap: 8px;
+}
+
+.sidebar__edit-button {
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: start;
+}
+
+.sidebar__signout-button {
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: start;
 }
