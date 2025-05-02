@@ -3,9 +3,13 @@ import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
 import "./Profile.css";
 
-function Profile({ clothingItems, onCardClick, handleAddClick }) {
-  const [activeModal, setActiveModal] = useState("");
-
+function Profile({
+  clothingItems,
+  onCardClick,
+  handleAddClick,
+  onCardLike,
+  setActiveModal,
+}) {
   const handleEditProfile = () => {
     setActiveModal("edit-profile");
   };
@@ -25,6 +29,7 @@ function Profile({ clothingItems, onCardClick, handleAddClick }) {
           clothingItems={clothingItems}
           handleCardClick={onCardClick}
           handleAddClick={handleAddClick}
+          onCardLike={onCardLike}
         />
       </section>
     </div>

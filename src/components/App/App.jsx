@@ -203,7 +203,7 @@ function App() {
                 element={
                   <Main
                     weatherData={weatherData}
-                    handleCardClick={handleCardClick}
+                    onCardClick={handleCardClick}
                     clothingItems={clothingItems}
                     onCardLike={handleCardLike}
                   />
@@ -218,6 +218,8 @@ function App() {
                       onCardClick={handleCardClick}
                       handleAddClick={handleAddClick}
                       currentUser={currentUser}
+                      onCardLike={handleCardLike}
+                      setActiveModal={setActiveModal}
                     />
                   </ProtectedRoute>
                 }

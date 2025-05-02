@@ -37,10 +37,4 @@
 .card__like-icon {
   width: 20px;
   height: 20px;
-  filter: grayscale(100%);
-}
-
-.card__like-icon.liked {
-  filter: grayscale(0%) brightness(0) saturate(100%) sepia(100%)
-    hue-rotate(-30deg) contrast(1.2);
 }
