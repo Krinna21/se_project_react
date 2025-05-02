@@ -65,13 +65,6 @@ function Header({
                 )}
               </div>
             </Link>
-            <button
-              onClick={onLogout}
-              type="button"
-              className="header__logout-btn"
-            >
-              Log out
-            </button>
           </>
         ) : (
           <>
