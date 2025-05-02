@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import "./EditProfileModal.css";
 
 function EditProfileModal({ isOpen, onClose, onUpdateUser }) {
@@ -21,37 +22,32 @@ function EditProfileModal({ isOpen, onClose, onUpdateUser }) {
   };
 
   return (
-    <div className={`modal ${isOpen ? "modal_open" : ""}`}>
-      <div className="modal__content">
-        <button className="modal__close-btn" onClick={onClose}>
-          X
-        </button>
-        <h2>Edit Profile</h2>
-        <form onSubmit={handleSubmit} className="modal__form">
-          <label>
-            Name
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </label>
-          <label>
-            Avatar URL
-            <input
-              type="url"
-              value={avatar}
-              onChange={(e) => setAvatar(e.target.value)}
-              required
-            />
-          </label>
-          <button type="submit" className="modal__save-btn">
-            Save
-          </button>
-        </form>
-      </div>
-    </div>
+    <ModalWithForm
+      title="Edit Profile"
+      isOpen={isOpen}
+      onClose={onClose}
+      onSubmit={handleSubmit}
+      buttonText="Save"
+    >
+      <label>
+        Name
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+      </label>
+      <label>
+        Avatar URL
+        <input
+          type="url"
+          value={avatar}
+          onChange={(e) => setAvatar(e.target.value)}
+          required
+        />
+      </label>
+    </ModalWithForm>
   );
 }
 

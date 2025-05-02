@@ -1,6 +1,7 @@
 .sidebar {
   gap: 16px;
   display: flex;
+  flex-direction: column;
 }
 
 .sidebar__avatar {
