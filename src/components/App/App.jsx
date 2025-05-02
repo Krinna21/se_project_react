@@ -220,6 +220,7 @@ function App() {
                       currentUser={currentUser}
                       onCardLike={handleCardLike}
                       setActiveModal={setActiveModal}
+                      onLogout={handleLogout}
                     />
                   </ProtectedRoute>
                 }

@@ -9,20 +9,16 @@ function Profile({
   handleAddClick,
   onCardLike,
   setActiveModal,
+  onLogout,
 }) {
   const handleEditProfile = () => {
     setActiveModal("edit-profile");
   };
 
-  const handleSignOut = () => {
-    localStorage.removeItem("token");
-    window.location.href = "/login";
-  };
-
   return (
     <div className="profile">
       <section className="profile__sidebar">
-        <SideBar onEditProfile={handleEditProfile} onSignOut={handleSignOut} />
+        <SideBar onEditProfile={handleEditProfile} onSignOut={onLogout} />
       </section>
       <section className="profile__clothing-items">
         <ClothesSection
