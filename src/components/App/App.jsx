@@ -140,17 +140,13 @@ function App() {
   useEffect(() => {
     getItems()
       .then((data) => {
-        const formattedData = data.map((item) => ({
-          ...item,
-          link: item.imageUrl || item.link,
-        }));
-        setClothingItems(formattedData);
+        setClothingItems(data);
       })
       .catch(console.error);
   }, []);
 
   const handleAddItemModalSubmit = ({ name, imageUrl, weather }) => {
-    const newItem = { name, link: imageUrl, weather };
+    const newItem = { name, imageUrl, weather };
 
     postItem(newItem)
       .then((data) => {

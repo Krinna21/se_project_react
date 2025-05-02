@@ -54,6 +54,8 @@
 
 .header__avatar {
   cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 
 .header__avatar:hover {
@@ -78,6 +80,12 @@
   text-decoration: none;
   color: #000000;
   font-weight: 300;
+}
+
+.header__logout-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1440px) {

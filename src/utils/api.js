@@ -16,18 +16,26 @@ function getItems() {
 }
 
 function postItem(item) {
+  const token = localStorage.getItem("jwt");
+
   return request(`${baseURL}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(item),
   });
 }
 
 function deleteItem(itemId) {
+  const token = localStorage.getItem("jwt");
+
   return request(`${baseURL}/items/${itemId}`, {
     method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
   });
 }
 
