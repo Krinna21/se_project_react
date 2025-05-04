@@ -77,4 +77,5 @@ export {
   updateUserInfo,
   addCardLike,
   removeCardLike,
+  checkResponse,
 };

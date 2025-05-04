@@ -1,5 +1,6 @@
 import "./ItemCard.css";
 import { useContext, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import LikeIcon from "../../assets/like-button.svg";
@@ -9,6 +10,7 @@ import LikedIcon from "../../assets/liked-button.svg";
 function ItemCard({ item, onCardClick, onCardLike }) {
   const currentUser = useContext(CurrentUserContext);
   const [isHovered, setIsHovered] = useState(false);
+  const location = useLocation(); // Get current page location
 
   const handleCardClick = () => {
     onCardClick(item);
@@ -22,23 +24,26 @@ function ItemCard({ item, onCardClick, onCardLike }) {
   };
 
   const isLiked = item.likes?.includes(currentUser?._id);
-
   let icon = LikeIcon;
   if (isHovered && !isLiked) icon = LikeHoverIcon;
   if (isLiked) icon = LikedIcon;
+
+  const isHomePage = location.pathname === "/"; // Check if it's the homepage
 
   return (
     <li className="card">
       <div className="card__header">
         <h2 className="card__name">{item.name}</h2>
-        <button
-          onClick={handleLike}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          className="card__like-btn"
-        >
-          <img src={icon} alt="like icon" className="card__like-icon" />
-        </button>
+        {!isHomePage && (
+          <button
+            onClick={handleLike}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="card__like-btn"
+          >
+            <img src={icon} alt="like icon" className="card__like-icon" />
+          </button>
+        )}
       </div>
       <img
         onClick={handleCardClick}

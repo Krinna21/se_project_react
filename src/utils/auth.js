@@ -1,3 +1,5 @@
+import { checkResponse } from "./api"; 
+
 const BASE_URL = "http://localhost:3001";
 
 const register = ({ name, avatar, email, password }) => {
@@ -28,13 +30,6 @@ const getUserContent = (token) => {
       Authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
-};
-
-const checkResponse = (res) => {
-  if (res.ok) {
-    return res.json();
-  }
-  return Promise.reject(`Error: ${res.status}`);
 };
 
 export { register, authorize, getUserContent };

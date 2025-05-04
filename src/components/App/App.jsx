@@ -104,6 +104,7 @@ function App() {
     getUserContent(token)
       .then((userData) => {
         setCurrentUser(userData);
+        setIsLoggedIn(true);
       })
       .catch((err) => {
         console.error("Get user info error:", err);
@@ -124,7 +125,6 @@ function App() {
     const token = localStorage.getItem("jwt");
     if (token) {
       fetchUserData(token);
-      setIsLoggedIn(true);
     }
   }, []);
 
@@ -192,7 +192,6 @@ function App() {
               handleAddClick={handleAddClick}
               weatherData={weatherData}
               isLoggedIn={isLoggedIn}
-              currentUser={currentUser}
               onLogout={handleLogout}
               onLoginClick={() => setActiveModal("login")}
               onRegisterClick={() => setActiveModal("register")}
@@ -217,7 +216,6 @@ function App() {
                       clothingItems={clothingItems}
                       onCardClick={handleCardClick}
                       handleAddClick={handleAddClick}
-                      currentUser={currentUser}
                       onCardLike={handleCardLike}
                       setActiveModal={setActiveModal}
                       onLogout={handleLogout}
