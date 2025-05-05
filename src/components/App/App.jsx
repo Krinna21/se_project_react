@@ -145,6 +145,22 @@ function App() {
       .catch(console.error);
   }, []);
 
+  useEffect(() => {
+    const handleOpenRegisterModal = () => setActiveModal("register");
+    const handleOpenLoginModal = () => setActiveModal("login");
+
+    document.addEventListener("open-register-modal", handleOpenRegisterModal);
+    document.addEventListener("open-login-modal", handleOpenLoginModal);
+
+    return () => {
+      document.removeEventListener(
+        "open-register-modal",
+        handleOpenRegisterModal
+      );
+      document.removeEventListener("open-login-modal", handleOpenLoginModal);
+    };
+  }, []);
+
   const handleAddItemModalSubmit = ({ name, imageUrl, weather }) => {
     const newItem = { name, imageUrl, weather };
 
@@ -211,7 +227,7 @@ function App() {
               <Route
                 path="/profile"
                 element={
-                  <ProtectedRoute>
+                  <ProtectedRoute isLoggedIn={isLoggedIn}>
                     <Profile
                       clothingItems={clothingItems}
                       onCardClick={handleCardClick}

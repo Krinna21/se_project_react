@@ -29,22 +29,24 @@ function EditProfileModal({ isOpen, onClose, onUpdateUser }) {
       onSubmit={handleSubmit}
       buttonText="Save"
     >
-      <label>
+      <label className="modal__label">
         Name
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          className="modal__input"
         />
       </label>
-      <label>
+      <label className="modal__label">
         Avatar URL
         <input
           type="url"
           value={avatar}
           onChange={(e) => setAvatar(e.target.value)}
           required
+          className="modal__input"
         />
       </label>
     </ModalWithForm>

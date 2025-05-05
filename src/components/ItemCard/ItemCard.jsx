@@ -10,7 +10,7 @@ import LikedIcon from "../../assets/liked-button.svg";
 function ItemCard({ item, onCardClick, onCardLike }) {
   const currentUser = useContext(CurrentUserContext);
   const [isHovered, setIsHovered] = useState(false);
-  const location = useLocation(); // Get current page location
+  const location = useLocation();
 
   const handleCardClick = () => {
     onCardClick(item);
@@ -28,13 +28,13 @@ function ItemCard({ item, onCardClick, onCardLike }) {
   if (isHovered && !isLiked) icon = LikeHoverIcon;
   if (isLiked) icon = LikedIcon;
 
-  const isHomePage = location.pathname === "/"; // Check if it's the homepage
+  const isHomePage = location.pathname === "/";
 
   return (
     <li className="card">
       <div className="card__header">
         <h2 className="card__name">{item.name}</h2>
-        {!isHomePage && (
+        {currentUser && (
           <button
             onClick={handleLike}
             onMouseEnter={() => setIsHovered(true)}
