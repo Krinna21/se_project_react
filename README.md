@@ -34,3 +34,7 @@ To run this project locally:
 ```bash
 npm install
 ```
+
+## Domain Name
+
+www.whatowear.jumpingcrab.com
