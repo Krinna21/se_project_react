@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3001";
+const BASE_URL = "http://localhost:3001";
 
 function checkResponse(res) {
   if (res.ok) {
@@ -12,13 +12,13 @@ function request(url, options) {
 }
 
 function getItems() {
-  return request(`${baseURL}/items`);
+  return request(`${BASE_URL}/items`);
 }
 
 function postItem(item) {
   const token = localStorage.getItem("jwt");
 
-  return request(`${baseURL}/items`, {
+  return request(`${BASE_URL}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ function postItem(item) {
 function deleteItem(itemId) {
   const token = localStorage.getItem("jwt");
 
-  return request(`${baseURL}/items/${itemId}`, {
+  return request(`${BASE_URL}/items/${itemId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -40,7 +40,7 @@ function deleteItem(itemId) {
 }
 
 function addCardLike(itemId, token) {
-  return request(`${baseURL}/items/${itemId}/likes`, {
+  return request(`${BASE_URL}/items/${itemId}/likes`, {
     method: "PUT",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ function addCardLike(itemId, token) {
 }
 
 function removeCardLike(itemId, token) {
-  return request(`${baseURL}/items/${itemId}/likes`, {
+  return request(`${BASE_URL}/items/${itemId}/likes`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ function removeCardLike(itemId, token) {
 function updateUserInfo({ name, avatar }) {
   const token = localStorage.getItem("jwt");
 
-  return request(`${baseURL}/users/me`, {
+  return request(`${BASE_URL}/users/me`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

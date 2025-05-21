@@ -61,6 +61,11 @@ export const weatherOptions = [
   },
 ];
 
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "put the URL for your deployed backend here, including https://"
+    : "http://localhost:3001";
+
 export const defaultWeatherOptions = {
   day: {
     url: new URL("../assets/day/default.png", import.meta.url).href,
