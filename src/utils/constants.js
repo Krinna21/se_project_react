@@ -61,11 +61,6 @@ export const weatherOptions = [
   },
 ];
 
-const BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? "put the URL for your deployed backend here, including https://"
-    : "http://localhost:3001";
-
 export const defaultWeatherOptions = {
   day: {
     url: new URL("../assets/day/default.png", import.meta.url).href,
@@ -120,3 +115,8 @@ export const coordinates = {
 };
 
 export const APIkey = "5c5f005f2932b8fe895669941e6bbc26";
+
+export const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.whatowear.jumpingcrab.com"
+    : "http://localhost:3001";
